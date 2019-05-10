@@ -24,7 +24,7 @@ public class History implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @OneToOne
     private Reader reader;
@@ -38,7 +38,7 @@ public class History implements Serializable {
     public History() {
     }
 
-    public History(Long id, Reader reader, Book book, Date dateTakeBook, Date dateReturnBook) {
+    public History(Long id,Reader reader, Book book, Date dateTakeBook, Date dateReturnBook) {
         this.id = id;
         this.reader = reader;
         this.book = book;
